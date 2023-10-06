@@ -1,0 +1,129 @@
+Exercise Source Control:
+PS.: Make sure to write the answers in between the pseudocode that follow
+
+You are required to give the following statements in the form of a command.
+
+The default path is C:\Users\Students>
+Another PS.: Make sure to name all files and folders using Camel Case without a space in between.
+NB: Keep in mind to always record your answers below each question; I will mark this exercise
+
+1.  Navigate, using the cmd, to the Documents and make a folder called, fastFoodPlaces.
+*cd Documents
+*mkdir fastFoodPlaces
+   
+2.  Create a text file called, theBurgerJoint, inside of the folder
+    fastFoodPlaces with the following content: 
+    "This is my favorite place food place to go to".
+*echo "This is my favorite place food place to go to" > fastFoodPlaces\theBurgerJoint.txt
+
+
+3.  Now go to Git Hub and create a new repository for a remote repository.
+    (No command needed)
+* I created the new repository on GitHub(Online).
+
+4.  Initial your fastFoodPlaces folder to become a git repository.
+*cd fastFoodPlaces
+*git init
+
+
+5.  Now link the local repository to the remote repository.
+*git remote add origin <repository_url>
+
+
+6.  Now TRACK your file. After tracking, STAGE your file with a comment/message about what 
+    you are doing with the file.
+*git add theBurgerJoint.txt
+*git commit -m "Adding theBurgerJoint.txt"
+
+
+7.  Push your code to GitHub
+*git push -u origin main
+
+
+8.  Modify your text file and add the following menu to it, 
+    "
+    Menu:
+    1) The Whopping Burger
+    2) The Smashing Burger
+    "
+
+9.  Now what command do I use to check what has been changed BEFORE tracking and staging files?
+*git diff
+
+
+    If nothing appears, you did something incorrectly.
+    provide your answer here
+
+    Only if you were successful, press "q" to "bring the command line path back"
+
+10. Now track and use a command to view the changes again(Hint: like you did in No. 9)
+    provide your answer here
+*git add theBurgerJoint.txt
+*git diff --staged
+
+
+11. Stage your changes. After, push the code to Git Hub.
+*git commit -m "Adding menu to theBurgerJoint.txt"
+*git push
+
+
+12. Now create a text file called "prices" with a text of "R300".
+*echo "R300" > prices.txt
+
+13. Stage, provide a message, and push the change to Git Hub.
+*git add prices.txt
+*git commit -m "Adding prices.txt"
+*git push
+
+
+14. The file was a mistake and you need to delete it from Git Hub. What command would 
+    I use? 
+*git rm prices.txt
+
+15. Once a command is run, the prices text file will be removed, and you have to provide a commit message. 
+    
+
+17. We have decided that we want to work from another branch instead of the original 
+    branch(main). Make a new branch called secondFoodPlace and change to that branch.
+    BONUS: Indicate how to create and change to the new branch in 1 line of commands
+*git checkout -b secondFoodPlace
+
+
+18. Now add new items to the Menu in the Burger Joint file,
+    3) The forgiving Burger
+    4) The Vegan Burger
+
+19. Now TRACK, provide a message and PUSH the files to the new branch that was created.
+*git add theBurgerJoint.txt
+*git commit -m "Adding new items to the menu"
+*git push origin secondFoodPlace
+
+
+20. Use a command to check the DIFFERENCE between 2 BRANCHES.
+*git diff main..secondFoodPlace
+
+
+
+21. We are happy with the updates that we have made. Please create a pull request and merge the new branch into the main branch. 
+Once the merge has been confirmed please delete secondFoodPlaces from your remote repository there should be a button on your right side
+On your local repository, you have to checkout the main branch in order to run a certain command that will reflect the change on your local repository.
+*Pull request on GitHub and merge the "secondFoodPlace" branch into the "main" branch(Done online to my GitHub)
+
+22. On your local repository, please checkout to main branch so that you can delete secondFoodPlaces branch.
+*git checkout main
+*git branch -d secondFoodPlace
+
+ 
+***DO NOT DELETE THE MAIN BRANCH***
+
+23. Now display the full history/journal of your repository.
+*git log
+
+
+24. Please display the reversed order of your git repository and Make sure to explain git rebase, git fetch, git merge, and git pull.
+*git log --reverse
+
+
+25. Please explain git terms: 
+	- HEADS: Refers to pointers to the lastest commit in each branch. It's essentially the "current branch" or "Where you are" in Git.
+	- refs: Short for "references,"these are pointers to commits. For example, branch names are refs that point to the latest commit in that branch.
