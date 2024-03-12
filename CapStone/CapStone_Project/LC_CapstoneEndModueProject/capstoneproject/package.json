@@ -1,0 +1,41 @@
+{
+  "name": "capstoneproject",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free": "^6.5.1",
+    "axios": "^1.6.7",
+    "bootstrap": "^5.3.3",
+    "core-js": "^3.36.0",
+    "firebase": "^10.8.1",
+    "json-server": "^0.17.4",
+    "register-service-worker": "^1.7.2",
+    "stripe": "^14.20.0",
+    "sweetalert": "^2.1.2",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0",
+    "vue-spinner": "^1.0.4",
+    "vue3-cookies": "^1.0.6",
+    "vuex": "^4.1.0",
+    "vuex-composition-helpers": "^2.0.3",
+    "vuex-persistedstate": "^4.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/eslint-parser": "^7.23.10",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-pwa": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-plugin-vuex": "~5.0.0",
+    "@vue/cli-service": "^5.0.8",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.7.1"
+  }
+}
