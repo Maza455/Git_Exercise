@@ -123,23 +123,18 @@
                 </div>
             </div>
         </section>
-        <footer class="bg-dark text-white pt-5 pb-4" style="font-size: 18px;">
-            <!-- Footer content -->
-        </footer>
     </div>
 </template>
 
 <script>
 import '../assets/Css/style.css'
+
     export default {
         
     }
 </script>
 
 <style>
-
-/* home styling */
-
 *,
 *::after,
 *::before {

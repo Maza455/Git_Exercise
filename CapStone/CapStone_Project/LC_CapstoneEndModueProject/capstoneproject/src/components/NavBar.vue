@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light" style="background: indigo;">
         <div class="container-fluid">
-            <router-link to="../index.html" class="navbar-brand">
+            <router-link to="../views/HomeView.vue" class="navbar-brand">
                 <img src="https://i.postimg.cc/HxFKfh56/Proctor.png" alt="logo" width="45" height="35"
                     class="d-inline-block align-text-top mr-2 navbar-logo">
             </router-link>
@@ -15,16 +15,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-capitalize">
                     <li class="nav-item">
-                        <router-link to="../views/HomeView.vue" class="nav-link active">Home</router-link>
+                        <router-link to="/" class="nav-link active">Home</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link to="../views/AboutView.vue" class="nav-link active">About</router-link>
+                        <router-link to="/about" class="nav-link active">About</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link to="../views" class="nav-link active">Product</router-link>
+                        <router-link to="/products" class="nav-link active">Products</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link to="./admin.html" class="nav-link active">Admin</router-link>
+                        <router-link to="/admin" class="nav-link active">Admin</router-link>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -32,19 +32,19 @@
                             Category
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><router-link to="./career.html" class="dropdown-item">Careers</router-link></li>
-                            <li><router-link to="./books.html" class="dropdown-item">Books</router-link></li>
-                            <li><router-link to="./mobile.html" class="dropdown-item">Phones</router-link></li>
+                            <li><router-link to="/careers" class="dropdown-item">Careers</router-link></li>
+                            <li><router-link to="/books" class="dropdown-item">Books</router-link></li>
+                            <li><router-link to="/mobile" class="dropdown-item">Phones</router-link></li>
                             <!-- <hr class="dropdown-divider">
                             </hr> -->
-                            <li><router-link to="./login.html" class="dropdown-item">Login/Signup</router-link></li>
+                            <li><router-link to="/login-signup" class="dropdown-item">Login/Signup</router-link></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <router-link to="./cart.html" class="nav-link active">Checkout</router-link>
+                        <router-link to="/checkout" class="nav-link active">Checkout</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link to="./contact.html" class="nav-link active">Contact</router-link>
+                        <router-link to="/contact" class="nav-link active">Contact</router-link>
                     </li>
                 </ul>
 
@@ -70,7 +70,6 @@ export default {
 <style scoped>
 .navbar-nav .nav-item .nav-link {
     color: white;
-    /* Set text color to white */
 }
 
 </style>

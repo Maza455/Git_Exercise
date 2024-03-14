@@ -1,6 +1,6 @@
 <template>
     <section id="contactMe">
-        <p id="contact-head">Contact Me</p>
+        <p id="contact-head">Contact_Page</p>
         <p id="contact-message">Do you have any questions? Please do not hesitate to contact me directly. I'll come back
             to you within a matter of hours to help you.</p>
 
@@ -68,7 +68,7 @@
 
 <script>
 export default {
-    name: 'ContactMe'
+    name: 'ContactComp'
 }
 </script>
 

@@ -2,94 +2,78 @@ import {
     createRouter,
     createWebHistory
 } from 'vue-router';
-import {
-    useStore
-} from 'vuex';
-
-import HomeView from '@/views/HomeView.vue';
-import CategoryProductsView from '@/views/CategoryProductsView.vue';
-import CartView from '@/views/CartView.vue';
-import CheckoutView from '@/views/CheckoutView.vue';
-import OrderView from '@/views/OrderView.vue';
-import AboutView from '@/views/AboutView.vue';
-import ContactView from '@/views/ContactView.vue';
+import HomeView from '../views/HomeView.vue';
+import AboutView from '../views/AboutView.vue';
+import ProductsView from '../views/ProductsView.vue';
+import AdminView from '../views/AdminView.vue';
+import CheckoutView from '../views/CheckoutView.vue';
+import ContactView from '../views/ContactView.vue';
+import CategoryView from '../views/CategoryView.vue';
+import CareersView from '../views/CareersView.vue';
+import BooksView from '../views/BooksView.vue';
+import PhonesView from '../views/PhonesView.vue'
+import LoginSignupView from '../views/LoginSignupView.vue';
 
 const routes = [{
         path: '/',
         name: 'home',
-        component: HomeView,
-        meta: {
-            title: 'Home | Kasi.eCo'
-        }
-    },
-    {
-        path: '/products/:category',
-        name: 'category-products',
-        component: CategoryProductsView,
-        meta: {
-            title: 'Products page | Kasi.eCo'
-        }
-    },
-    {
-        path: '/cart-view',
-        name: 'cart-view',
-        component: CartView,
-        meta: {
-            title: 'Cart | Kasi.eCo'
-        }
-    },
-    {
-        path: '/checkout',
-        name: 'checkout',
-        component: CheckoutView,
-        meta: {
-            title: 'Checkout | Kasi.eCo'
-        }
-    },
-    {
-        path: '/order/:sessionId',
-        name: 'order',
-        component: OrderView,
-        meta: {
-            title: 'Order details | Kasi.eCo'
-        }
+        component: HomeView
     },
     {
         path: '/about',
         name: 'about',
-        component: AboutView,
-        meta: {
-            title: 'About | Kasi.eCo'
-        }
+        component: AboutView
+    },
+    {
+        path: '/products',
+        name: 'products',
+        component: ProductsView
+    },
+    {
+        path: '/admin',
+        name: 'admin',
+        component: AdminView
+    },
+    {
+        path: '/checkout',
+        name: 'checkout',
+        component: CheckoutView
     },
     {
         path: '/contact',
         name: 'contact',
-        component: ContactView,
-        meta: {
-            title: 'Contact | Kasi.eCo'
-        }
-    }
-];
+        component: ContactView
+    },
+    {
+        path: '/category',
+        name: 'category',
+        component: CategoryView
+    },
+    {
+                path: '/careers',
+                name: 'careers',
+                component: CareersView
+            },
+            {
+                path: '/books',
+                name: 'books',
+                component: BooksView
+            },
+            {
+                path: '/phones',
+                name: 'phones',
+                component: PhonesView
+            },
+            {
+                path: '/login-signup',
+                name: 'login-signup',
+                component: LoginSignupView
+            }
+        ]
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory(process.env.BASE_URL),
     routes
-});
-
-router.beforeEach((to, from, next) => {
-    document.title = to.meta.title;
-
-    const store = useStore();
-
-    const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
-    const admin = store.state.CurrentUser.admin;
-
-    if (requiresAuth && !admin) {
-        next('/error/401');
-    } else {
-        next();
-    }
 });
 
 export default router;
